@@ -38,7 +38,7 @@ This is a **responsive static bakery website** built using **HTML and CSS**. It 
 
 ## 📁 Project Structure
 
-
+```bash 
 Bakery-UI-Website/
 ├── index.html              # Main homepage
 ├── order.html              # order page
@@ -49,7 +49,7 @@ Bakery-UI-Website/
 ├── README.md               # Project documentation
 ├── style.css                # Website styles         
 └── images/             # Product and UI images (optional)
-
+```
 
 ---
 ## 🚀 Getting Started
@@ -62,13 +62,13 @@ To run this project locally on your machine:
 git clone https://github.com/HitarthNV/Bakery-UI-Website.git
 cd Bakery-UI-Website
 
-
+```
 
 ---
 
 ## ✅ `How to Contribute` Section
 
-```markdown
+
 ## 🤝 How to Contribute
 
 Contributions, issues, and feature requests are welcome!
@@ -84,13 +84,13 @@ If you’d like to improve this project (bug fixes, enhancements, UI changes):
 ```bash
 git checkout -b feature/YourFeatureName
 
-
+```
 
 ---
 
 ## ✅ `Author` Section (with social links)
 
-```markdown
+
 ## 👨‍💻 Author
 
 **Hitarth Nilesh Vasita**
