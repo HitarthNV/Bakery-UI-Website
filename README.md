@@ -38,7 +38,7 @@ This is a **responsive static bakery website** built using **HTML and CSS**. It 
 
 ## 📁 Project Structure
 
-```text
+
 Bakery-UI-Website/
 ├── index.html              # Main homepage
 ├── order.html              # order page
