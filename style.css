@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+/* DEFINED THE COMMON COLORS HERE USING GLOBAL VARIABLES  */
+:root{
+  --primary-color:  #c98d83;
+  --secondary : #783b31;
+  --bg: #f2f1ec;
+  --black: #000;
+  --white: #fff;
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+/* DEFINED THESE SCOPES UNIVERSALLY */
+*{
+  font-family: 'Vidaloka', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+/*  THIS CSS cODE  IS DEFINED FOR THE STYLES OF HTML ELEMENT AND FOCUSED ON FONT-SIZE,OVERFLOW BEHAVIOUR,SCROLL STYLING AND SCROLLBAR APPERANCE */
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--primary-color);
+  border-radius: 5rem;
+}
+/* DEFINED FOR GENERAL SECTION ATTRIBUTE */
+section{
+  padding: 2rem 7%;
+}
+/* DEFINED FOR STYLES OF HEADING like for about us , gallery */
+.heading{
+  text-align: center;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  padding: 1.2rem 0;
+  font-size: 4rem;
+}
+/* THIS FOR SPAN TAG INSIDE OTHER TAG WHOSE CLASS IS HEADING */
+.heading span{
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+
+/* header  for the class with header and has styles for header's logo,navbar, a tag */
+
+.header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--bg);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 2rem 9%;
+}
+
+ .header .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--black);
+} 
+
+.header .logo i{
+  color: var(--secondary);
+  padding-right: .5rem;
+}
+ 
+.header .navbar a{
+  font-size: 24px;
+  color: var(--secondary);
+  margin: 0 1rem;
+
+}
+
+.header .navbar a:hover{
+  color: var(--black);
+}
+
+  /* banner */
+  .banner{
+    background: url(../images/banner-bg.jpg);
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  
+  .banner img{
+    margin-top: 3rem;
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+  .about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .about .row .image{
+    flex: 1 1 40rem;
+  }
+  
+  .about .row .image img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .about .row .content{
+    flex: 1 1 40rem;
+  }
+  
+  .about .row .content h3{
+    color: var(--black);
+    font-size: 3.5rem;
+    line-height: 1.5;
+  }
+  
+  .about .row .content h3 span{
+    color: var(--secondary);
+  }
+  
+  .about .row .content p{
+    font-size: 1.4rem;
+    color: #444;
+    padding: 1rem 0;
+    line-height: 2;
+  }
+  .gallery {
+    padding: 20px;
+}
+
+.gallery h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 3.5rem;
+    color:var(--secondary);
+}
+
+.gallery .row {
+    margin-bottom: 20px;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+  .review{
+    background: var(--bg);
+  }
+  
+  .review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .review .box-container .box{
+    border: .1rem solid rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--white);
+  }
+  
+  .review .box-container .box .user{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .review .box-container .box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+ 
+  .review .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #444;
+    padding-top: 1rem;
+  }
+  .footer{
+    background: var(--bg);
+    text-align: center;
+  }
+  
+  .footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer .box-container .box h3{
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    color: var(--secondary);
+    padding: 1rem 0;
+  }
+  
+  .footer .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #444;
+    padding: .5rem 0;
+  }
+  
+  .footer .box-container .box .share{
+    margin-top: 1rem;
+  }
+  
+  .footer .box-container .box .share a{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 10%;
+    font-size: 1.7rem;
+    background: var(--primary-color);
+    color: var(--white);
+    margin-right: .3rem;
+  }
+  
+  .footer .box-container .box .share a:hover{
+    background: var(--secondary);
+  }
+  
+  .footer .box-container .box .link{
+    font-size: 1.7rem;
+    line-height: 2;
+    color: var(--primary-color);
+    padding: .5rem 0;
+    display: block;
+  }
+  
+  .footer .box-container .box .link:hover{
+    color: var(--secondary);
+    text-decoration: underline;
+  }
+  
+
+/* Adjust the font size of the carousel caption based on screen size */
+@media (max-width: 768px) {
+  .carousel-caption {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption {
+      font-size: 1.2rem;
+  }
+}
+

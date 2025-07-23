@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Wedding celebrations</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById('orderForm');
+                const firstNameInput = document.getElementById('firstName');
+                const lastNameInput = document.getElementById('lastName');
+                const emailInput = document.getElementById('email');
+                const phoneInput = document.getElementById('phone');
+                const foodNameInput = document.getElementById('foodName');
+                const quantityInput = document.getElementById('quantity');
+                const addressInput = document.getElementById('address');
+        
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    if (validateForm()) {
+                        // Submit the form data
+                        form.submit();
+                    }
+                });
+        
+                function validateForm() {
+                    const firstName = firstNameInput.value.trim();
+                    const lastName = lastNameInput.value.trim();
+                    const email = emailInput.value.trim();
+                    const phone = phoneInput.value.trim();
+                    const foodName = foodNameInput.value.trim();
+                    const quantity = quantityInput.value.trim();
+                    const address = addressInput.value.trim();
+        
+                    if (firstName === '') {
+                        alert('Please enter your first name.');
+                        return false;
+                    }
+        
+                    if (lastName === '') {
+                        alert('Please enter your last name.');
+                        return false;
+                    }
+        
+                    if (!isValidEmail(email)) {
+                        alert('Please enter a valid email address.');
+                        return false;
+                    }
+        
+                    if (!isValidPhone(phone)) {
+                        alert('Please enter a valid phone number.');
+                        return false;
+                    }
+        
+                    if (foodName === '') {
+                        alert('Please enter the food name.');
+                        return false;
+                    }
+        
+                    if (quantity === '' || isNaN(quantity)) {
+                        alert('Please enter a valid quantity.');
+                        return false;
+                    }
+        
+                    if (address === '') {
+                        alert('Please enter your address.');
+                        return false;
+                    }
+        
+                    return true;
+                }
+        
+                function isValidEmail(email) {
+                    // Regular expression for validating email address
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(email);
+                }
+        
+                function isValidPhone(phone) {
+                    // Regular expression for validating phone number
+                    const phoneRegex = /^\d{10}$/;
+                    return phoneRegex.test(phone);
+                }
+            });
+        </script>
+        
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <i class="fas fa-bread-slice"></i>Maheswari's  bakery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="new.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+ <section class="order" id="order">
+    <h1 class="heading"><span>order</span> now </h1>
+    <div class="row">
+        <div class="image">
+            <img src="i/order.gif" alt="">
+        </div>
+        <form id="orderForm">
+            <div class="inputBox">
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name">
+            </div>
+            <div class="inputBox">
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="foodName" placeholder="Food Name" required>
+                <input type="number" id="quantity" placeholder="Quantity"required>
+            </div>
+            <textarea id="address" placeholder="Your Address" cols="30" rows="10"></textarea>
+            <input type="submit" style="background-color: orange;" value="Order Now" class="btn">
+        </form>
+    </div>
+</section>
+
+
+   <footer class="bg-dark text-light text-center py-4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: maheswaribakess91@gmail.com</p>
+                <p>Phone: +079-456-789</p>
+                <p>Address:401, south east mall ,vasai ,Mumbai</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#" class="footer-link"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#" class="footer-link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Promotions</h5>
+                <p>Subscribe to our promotions for the latest updates and offers.</p>
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email"
+                            aria-label="Enter your email" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    <!-- Bootstrap JS (jQuery and Popper.js are required for Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        .navbar {
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-family: 'Edwardian Script ITC';
+            font-size: 40px;
+        }
+
+        .navbar-nav .nav-link {
+            align-items: end;
+            color: #333333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: orange;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #333333;
+        }
+        .order .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.order .row .image{
+  flex: 1 1 30rem;
+}
+
+.order .row .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.order .row form{
+  flex: 1 1 50rem;
+  padding: 5rem;
+}
+
+.order .row form .inputBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.order .row form .inputBox input,
+.order .row form textarea{
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  color: var(--secondary);
+  text-transform: lowercase;
+  background: var(--bg);
+  border-radius: .5rem;
+  width: 49%;
+}
+
+.order .row form .inputBox input:focus,
+.order .row form textarea:focus{
+  border: .1rem solid var(--primary-color);
+}
+
+.order .row form textarea{
+  width: 100%;
+  resize: none;
+  height: 15rem;
+}
+
+        .footer-link {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer-link:hover {
+            color: #007bff;
+        }
+    </style>
+
+</body>
+
+</html>
