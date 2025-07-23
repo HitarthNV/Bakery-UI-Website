@@ -51,7 +51,7 @@ Bakery-UI-Website/
 └── images/             # Product and UI images (optional)
 
 
-
+---
 ## 🚀 Getting Started
 
 To run this project locally on your machine:
