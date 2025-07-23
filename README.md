@@ -97,7 +97,7 @@ git checkout -b feature/YourFeatureName
 
 - 📧 Email: [hitarthvasitawrk24@gmail.com](mailto:hitarthvasitawrk24@gmail.com)
 - 🔗 GitHub: [@HitarthNV](https://github.com/HitarthNV)
-- 💼 LinkedIn: [linkedin.com/in/hitarth-vasita]([https://linkedin.com/in/hitarthvasita](https://www.linkedin.com/in/hitarth-vasita-b39643304/))
+- 💼 LinkedIn: [linkedin.com/in/hitarth-vasita]([https://www.linkedin.com/in/hitarth-vasita-b39643304/](https://www.linkedin.com/in/hitarth-vasita-b39643304/))
 
 ---
 
