@@ -37,12 +37,16 @@ This is a **responsive static bakery website** built using **HTML and CSS**. It 
 ---
 
 ## 📁 Project Structure
+## 📁 Project Structure
+
+```text
 Bakery-UI-Website/
-│
-├── index.html # Main homepage
-├── assets/
-│ └── css/
-│ └── style.css # Website styles
-│ └── images/ # (Optional) Product and UI images
-├── .nojekyll # To bypass Jekyll processing on GitHub Pages
-└── README.md # You're reading this file
+├── index.html              # Main homepage
+├── order.html              # order page
+├── about.html              # about epage
+├── product.html              #product page
+├── contact.html              #contact page
+├── gallery.html              # gallery page
+├── README.md               # Project documentation
+├── style.css                # Website styles         
+└── images/             # Product and UI images (optional)
